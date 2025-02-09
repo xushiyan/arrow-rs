@@ -32,13 +32,13 @@ use arrow_schema::{ArrowError, Schema, SchemaRef};
 use std::io::BufRead;
 use std::sync::Arc;
 
-mod header;
+pub mod header;
 
-mod block;
+pub mod block;
 
-mod cursor;
-mod record;
-mod vlq;
+pub mod cursor;
+pub mod record;
+pub mod vlq;
 
 /// Read a [`Header`] from the provided [`BufRead`]
 fn read_header<R: BufRead>(mut reader: R) -> Result<Header, ArrowError> {
