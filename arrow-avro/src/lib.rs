@@ -24,11 +24,11 @@
 #![allow(unused)] // Temporary
 
 pub mod reader;
-mod schema;
+pub mod schema;
 
-mod compression;
+pub mod compression;
 
-mod codec;
+pub mod codec;
 
 #[cfg(test)]
 mod test_util {
